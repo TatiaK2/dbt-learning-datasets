@@ -1,0 +1,9 @@
+version: 2
+
+sources: 
+  - name: ukraine
+    database: maximal-backup-251516
+    schema: ukraine_data
+    tables:
+      - name: russia_losses_equipment
+      - name: russia_losses_personnel

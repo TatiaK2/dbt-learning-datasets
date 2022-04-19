@@ -1,0 +1,16 @@
+select `date`,
+       `day`,
+       aircraft,
+       helicopter,
+       tank,
+       APC,
+       field_artillery,
+       MRL,
+       military_auto,
+       fuel_tank,
+       drone,
+       naval_ship,
+       anti_aircraft_warfare,
+       COALESCE(special_equipment, 0) AS special_equipment,
+       COALESCE(mobile_SRBM_system, 0) AS mobile_SRBM_system
+FROM {{ source('ukraine', 'russia_losses_equipment')}}
